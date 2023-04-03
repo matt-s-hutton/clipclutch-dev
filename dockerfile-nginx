@@ -1,0 +1,7 @@
+FROM nginx
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY cc.conf /etc/nginx/conf.d/
+COPY dev-cert/cc.crt /etc/nginx/
+COPY dev-cert/cc.key /etc/nginx/
