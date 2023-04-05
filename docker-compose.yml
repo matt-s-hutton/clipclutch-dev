@@ -11,12 +11,12 @@ services:
     ports:
       - '443:443'
 
-  # api:
-  #   container_name:
-  #   build:
-  #     context: .
-  #     dockerfile: dockerfile-
-  #   volumes:
-  #     - ''
-  #   ports:
-  #     - "9000:9000"
+  api:
+    container_name: ${API_CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: ${API_DOCKERFILE_NAME}
+    volumes:
+      - ${API_VOLUME_PATH}:/srv/api/
+    ports:
+      - "8081:8081"

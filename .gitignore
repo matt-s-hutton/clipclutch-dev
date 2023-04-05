@@ -4,3 +4,5 @@ build-config.sh
 *.conf
 dockerfile-*
 !dockerfile-nginx
+clipclutch-be/*
+clipclutch-fe/*
