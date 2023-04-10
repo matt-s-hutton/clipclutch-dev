@@ -19,8 +19,7 @@ ng build --output-path $FE_PATH
 
 popd
 
-cp $CLIPCLUTCH_SERV_PATH $BE_PATH
-cp $CLIPCLUTCH_SERV_CONF_PATH $BE_PATH
+cp -r $CLIPCLUTCH_SERV_PATH $BE_PATH
 cp -r $CLIPCLUTCH_SERV_LIB_PATH $BE_PATH
 
 docker-compose -f docker-compose.yml up -d
